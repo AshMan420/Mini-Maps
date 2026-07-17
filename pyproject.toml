@@ -1,0 +1,19 @@
+[project]
+name = "minimaps"
+version = "0.1.0"
+description = "How Google Maps finds routes, built from scratch - Dijkstra & A* on real OSM roads + Goa bus routing"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+minimaps = "minimaps.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["minimaps"]
