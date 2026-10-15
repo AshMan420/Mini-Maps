@@ -38,8 +38,6 @@ The heuristic is the haversine distance divided by the fastest speed *in the gra
 
 Both return every settled node, and `--viz` plots them (Leaflet + OpenStreetMap tiles, self-contained HTML). `bench` runs both over random pairs and asserts they always agree on the optimal cost — A* being faster is only interesting because the answer is provably identical.
 
-**Honest caveat you should know:** A*'s advantage depends on the network. On a uniform-speed grid going corner-to-corner (its theoretical worst case — every node looks equally promising), it barely wins: 381 vs 400 nodes in our test. On real road networks with fast highways and diagonal queries, expect several-fold fewer nodes explored. Run `bench` and quote *your* measured numbers, not folklore.
-
 ## Architecture
 
 ```
